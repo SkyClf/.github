@@ -26,10 +26,10 @@ SkyClf continuously fetches the **latest all-sky image**, lets you **label frame
 
 ### 🧩 Projects
 
-| Project | Stack | Description |
-| :--- | :--- | :--- |
-| **[SkyClf](https://github.com/SkyClf/SkyClf)** | Go, Docker | **Core Application.** Handles fetching, labeling, API, and model inference. |
-| **[SkyClf-Trainer](https://github.com/SkyClf/SkyClf-Trainer)** | Python | **Training Pipeline.** Reads local labels → trains a model → exports versioned models. |
+| Project | Stack | Description | Last Update |
+| :--- | :--- | :--- | :--- |
+| **[SkyClf](https://github.com/SkyClf/SkyClf)** | Go, Docker | **Core Application.** Handles fetching, labeling, API, and model inference. | ![GitHub last commit](https://img.shields.io/github/last-commit/SkyClf/SkyClf?style=flat-square&label=updated&color=blue) |
+| **[SkyClf-Trainer](https://github.com/SkyClf/SkyClf-Trainer)** | Python | **Training Pipeline.** Reads local labels → trains a model → exports versioned models. | ![GitHub last commit](https://img.shields.io/github/last-commit/SkyClf/SkyClf-Trainer?style=flat-square&label=updated&color=blue) |
 
 ---
 
