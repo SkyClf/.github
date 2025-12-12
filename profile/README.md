@@ -1,32 +1,51 @@
-## Hi there 👋
+<div align="center">
 
-**SkyClf** builds a lightweight, self-hosted toolkit to **classify all-sky camera images** and expose a simple **“current sky state”** API for dashboards and observatory automation.
+<img src="https://github.com/SkyClf.png" width="200" height="200" alt="SkyClf Logo"/>
 
-### What we’re building
-- **SkyClf** – Go server + web UI  
-  - fetches the latest all-sky image
-  - lets you label frames (`skystate`: clear / light_clouds / heavy_clouds / precipitation / unknown + optional meteor)
-  - serves a stable endpoint like `GET /api/latest`
-- **SkyClf Trainer** – Python trainer (separate repo)  
-  - reads your local labels + images
-  - trains/fine-tunes a model for *your* camera/site
-  - exports versioned models (e.g. ONNX)
+# SkyClf
 
-### Why “local training”?
-All-sky setups differ a lot (lens, exposure, light pollution, horizon obstructions). SkyClf is designed so each user can label a few frames and train a model that fits their environment.
+**Classify the sky — one frame at a time.**
 
-### Repositories
-- `skyclf` — main app (server + UI + compose)
-- `skyclf-trainer` — training pipeline (Python → model export)
+**SkyClf** is a lightweight, self-hosted system for **classifying all-sky camera images** <br />
+and exposing a simple, reliable **“current sky state”** API for observatories.
 
-### Get involved
-- Open issues for bugs/feature requests
-- PRs welcome (small, focused changes are easiest to review)
-- If you’re adding a new class/task, include a short note on labeling rules
+[Report Bug](https://github.com/SkyClf/SkyClf/issues) · [Request Feature](https://github.com/SkyClf/SkyClf/issues)
 
-### Resources
-- Docs: see each repo’s `README.md`
-- API: `GET /api/latest` (and dataset/label endpoints in the main repo)
+</div>
 
-### Fun fact
-We love clear skies — but we test on cloudy ones. ☁️✨
+---
+
+### ✨ What is SkyClf?
+
+SkyClf continuously fetches the **latest all-sky image**, lets you **label frames** and serves the result via a clean HTTP API. It is designed for **local training**, because no two skies — or cameras — are the same.
+
+**Supported States:**
+`clear` · `light_clouds` · `heavy_clouds` · `precipitation` · `unknown`
+
+---
+
+### 🧩 Projects
+
+| Project | Stack | Description |
+| :--- | :--- | :--- |
+| **[SkyClf](https://github.com/SkyClf/SkyClf)** | Go, Docker | **Core Application.** Handles fetching, labeling, API, and model inference. |
+| **[SkyClf-Trainer](https://github.com/SkyClf/SkyClf-Trainer)** | Python | **Training Pipeline.** Reads local labels → trains a model → exports versioned models. |
+
+---
+
+### 🌍 Why local models?
+
+All-sky setups vary wildly regarding optics, sensors, light pollution, and horizon obstructions. SkyClf embraces this by making **user-trained models first-class**, not an afterthought.
+
+---
+
+### 📚 Resources & Contributing
+
+* **API Entry Point:** `GET /api/latest`
+* **Contribute:** PRs are welcome! New classes or tasks should include clear labeling rules.
+
+---
+
+<div align="center">
+<i>Clear nights are rare — so we spend a lot of time training on clouds. ☁️</i>
+</div>
